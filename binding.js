@@ -103,7 +103,7 @@ module.exports.download_vips = function () {
           protocol: 'https'
         })
       };
-      const url = distBaseUrl + tarFilename;
+      const url = 'https://github.com/lovell/sharp-libvips/releases/download/v8.5.5/libvips-8.5.5-linux-x64.tar.gz';
       got.stream(url, gotOpt).on('response', function (response) {
         if (response.statusCode !== 200) {
           error(url + ' status code ' + response.statusCode);
